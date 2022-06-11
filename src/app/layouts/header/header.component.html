@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" src="../../../assets/socialgram_logo.png" height="30" width="30">Socialgram</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto px-4">
+            <div *ngIf="email" class="navbar-text float-left">{{email}}</div>
+            <a class="nav-item nav-link" [routerLink]="['/']" routerLinkActive="active">Home</a>
+            <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signin']" routerLinkActive="active">Signin</a>
+            <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signup']" routerLinkActive="active">Signup</a>
+            <a *ngIf="email" class="nav-item nav-link" (click)="handleSignOut()" routerLinkActive="active">Signout</a>
+        </div>
+    </div>
+</nav>

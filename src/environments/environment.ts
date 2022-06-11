@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBV7Tn19g4-UTuEmDIgx7fmxd4WJ2NlkqE",
+    authDomain: "socialgram-b8ecc.firebaseapp.com",
+    databaseURL: "https://socialgram-b8ecc-default-rtdb.firebaseio.com",
+    projectId: "socialgram-b8ecc",
+    storageBucket: "socialgram-b8ecc.appspot.com",
+    messagingSenderId: "69164457552",
+    appId: "1:69164457552:web:79f647822c8e105b07fb55"
+  }
 };
 
 /*
