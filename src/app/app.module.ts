@@ -17,6 +17,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
+    FontAwesomeModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),

@@ -9,3 +9,7 @@ body {
 .active {
     border-bottom: 1px solid #fff;
 }
+
+.add-post-btn {
+    border-radius: 5px;
+}
