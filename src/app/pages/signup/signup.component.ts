@@ -7,7 +7,6 @@ import { AngularFireDatabase } from "@angular/fire/compat/database";
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { finalize } from "rxjs/operators";
 import { config } from 'src/utils/config';
-// @ts-ignore
 import { v4 as uuidv4 } from 'uuid';
 // @ts-ignore
 import { readAndCompressImage } from 'browser-image-resizer';

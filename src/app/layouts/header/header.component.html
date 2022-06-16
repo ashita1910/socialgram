@@ -10,7 +10,7 @@
             <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signin']" routerLinkActive="active">Signin</a>
             <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signup']" routerLinkActive="active">Signup</a>
             <a *ngIf="email" class="nav-item nav-link" (click)="handleSignOut()" routerLinkActive="active">Signout</a>
-            <a *ngIf="email" class="nav-item nav-link btn-warning add-post-btn" [routerLink]="['/addpost']" routerLinkActive="active">Add Post</a>
+            <a *ngIf="email" class="nav-item nav-link btn-warning add-post-btn text-white" [routerLink]="['/addpost']" routerLinkActive="active">Add Post</a>
         </div>
     </div>
 </nav>
