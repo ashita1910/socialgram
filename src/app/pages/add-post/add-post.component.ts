@@ -45,7 +45,7 @@ export class AddPostComponent implements OnInit {
   onSubmit() {
     const uid = uuidv4();
 
-    this.db.object(`/posts/${this.user?.uid}`).set({
+    this.db.object(`/posts/${uid}`).set({
       id: uid,
       locationName: this.locationName,
       description: this.description,

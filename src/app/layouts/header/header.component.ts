@@ -26,9 +26,9 @@ export class HeaderComponent implements OnInit {
       await this.auth.signOut();
       this.email = null;
       this.router.navigateByUrl("signin");
-      this.toastr.success("Signed Out Successfully!");
+      this.toastr.success("Signed Out Successfully!", "", {closeButton: true});
     } catch (error) {
-      this.toastr.error("Sign Out Failed, please try again!");
+      this.toastr.error("Sign Out Failed, please try again!", "", {closeButton: true});
     }
   }
 

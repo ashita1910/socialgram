@@ -1,1 +1,9 @@
-<p>users works!</p>
+<div class="card mb-3 mt-4 d-flex flex-row">
+    <div class="d-flex justify-content-center align-items-center px-2">
+        <img [src]="user.picture" class="rounded-circle ml-2" height="50" width="50" />
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ user.name | uppercase }}</h5>
+        <p class="card-text">{{ user.bio }}</p>
+    </div>
+</div>

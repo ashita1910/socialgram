@@ -86,7 +86,7 @@
                             </div>
 
                             <div class="text-center">
-                                <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+                                <button class="btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="!(model.email && model.password && model.country && model.bio && model.name && model.username)">
                   Sign Up
                 </button>
                             </div>

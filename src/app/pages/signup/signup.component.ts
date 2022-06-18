@@ -84,7 +84,7 @@ export class SignupComponent implements OnInit {
     task.snapshotChanges().pipe(finalize(() => {
       fileRef.getDownloadURL().subscribe((url) => {
         this.picture = url;
-        this.toastr.success("Image Uploaded Successfully!");
+        this.toastr.success("Image Uploaded Successfully!", "", {closeButton: true});
       })
     })).subscribe();
   }

@@ -13,3 +13,12 @@ body {
 .add-post-btn {
     border-radius: 5px;
 }
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.img-post {
+    height: 400px !important;
+}
