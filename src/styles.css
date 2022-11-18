@@ -22,3 +22,14 @@ body {
 .img-post {
     height: 400px !important;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .card.feed-card {
+        max-width: 600px;
+        min-width: 600px !important;
+    }
+}

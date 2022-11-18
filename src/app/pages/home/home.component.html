@@ -4,24 +4,47 @@
     </div>
 
     <ng-template #Content>
-        <div class="row m-5">
-            <div class="col col-md-7">
+        <div class="row m-2">
+            <div class="col-md-12">
+                <p class="text-white text-uppercase text-center mt-3">
+                    Recent New Users
+                </p>
+                <div *ngIf="users.length == 0" class="d-flex flex-column align-items-center justify-content-center">
+                    <h6 class="text-white">
+                        Oops...Seems like there are no users present!
+                    </h6>
+                    <img src="../../../assets/404.svg" height="200" width="auto" />
+                </div>
+                <div class="row">
+                    <ng-container *ngIf="!isShowAllUsers">
+                        <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let user of users | slice: 0:6">
+                            <app-users [user]="user"></app-users>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="isShowAllUsers">
+                        <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let user of users">
+                            <app-users [user]="user"></app-users>
+                        </div>
+                    </ng-container>
+                    <div class="col-md-12">
+                        <p class="text-info mt-2 text-decoration-underline cursor-pointer" (click)="showAllUsers()">
+                            {{ isShowAllUsers ? "View Less Users" : "View All Users" }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center align-items-center flex-column">
+                <p class="text-white text-uppercase text-center mt-3">
+                    Recent New Posts
+                </p>
                 <div *ngIf="posts.length == 0" class="d-flex flex-column align-items-center justify-content-center">
-                    <h6 class="text-white">Oops...Seems like there are no posts present!</h6>
-                    <img src="../../../assets/404.svg" height="200" width="auto">
+                    <h6 class="text-white">
+                        Oops...Seems like there are no posts present!
+                    </h6>
+                    <img src="../../../assets/404.svg" height="200" width="auto" />
                 </div>
                 <div *ngFor="let post of posts">
                     <app-posts [post]="post"></app-posts>
-                </div>
-            </div>
-            <div class="col col-md-5">
-                <p class="text-white text-uppercase text-center">Recent new User</p>
-                <div *ngIf="users.length == 0" class="d-flex flex-column align-items-center justify-content-center">
-                    <h6 class="text-white">Oops...Seems like there are no users present!</h6>
-                    <img src="../../../assets/404.svg" height="200" width="auto">
-                </div>
-                <div *ngFor="let user of users">
-                    <app-users [user]="user"></app-users>
                 </div>
             </div>
         </div>

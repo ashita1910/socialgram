@@ -31,10 +31,8 @@ export class AddPostComponent implements OnInit {
     private auth: AuthService
   ) { 
     this.auth.getUser().subscribe((user) => {
-      console.log("user1: ", user);
       this.db.object(`/users/${user?.uid}`).valueChanges().subscribe((user) => {
         this.user = user;
-        console.log("user2: ", user);
       })
     });
   }
